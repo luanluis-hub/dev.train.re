@@ -309,3 +309,9 @@ article a:hover {
         margin-top: 1rem; /* Adiciona margem no topo */
     }
 }
+
+/* --- ANIMAÇÃO DE FADE ADICIONADA --- */
+/* Adiciona uma transição suave à opacidade do container dos cards */
+.card-container {
+    transition: opacity 0.3s ease-in-out;
+}
