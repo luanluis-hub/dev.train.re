@@ -324,3 +324,26 @@ main {
     width: 100%;
     padding: 0 1rem;
 }
+
+/* --- AJUSTES PARA TELAS MENORES (TABLETS E CELULARES) --- */
+@media (max-width: 1024px) {
+    .main-content-wrapper {
+        /* Muda a direção do flex para coluna e inverte a ordem.
+           Isso coloca o balão e o avatar EM CIMA da lista de jogos. */
+        flex-direction: column-reverse;
+        align-items: center; /* Centraliza os itens na vertical */
+    }
+
+    #dialogue-area {
+        position: static; /* Remove o comportamento "sticky" em telas menores */
+        margin-bottom: 3rem; /* Adiciona um bom espaço abaixo do diálogo */
+        flex-direction: column; /* Empilha o avatar e o balão */
+        align-items: center; /* Centraliza o avatar e o balão */
+    }
+
+    /* Esconde o "rabicho" do balão, pois ele não aponta mais para o avatar */
+    #container-balao::before,
+    #container-balao::after {
+        display: none;
+    }
+}
