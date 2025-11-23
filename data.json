@@ -1,0 +1,67 @@
+[
+    {
+        "nome": "ender liles",
+        "steam_link": "https://store.steampowered.com/app/1369630/ENDER_LILIES_Quietus_of_the_Knights/",
+        "data": "21/06/2021",
+        "resumo": "Ender Lilies é um metroidvania dark-fantasy que acompanha Lily, a última sacerdotisa branca, em um mundo arruinado por uma chuva mágica que transforma pessoas em monstros. Lily acorda sem memória e passa a explorar reinos destruídos para descobrir a origem da calamidade. Ela não luta diretamente, mas invoca espíritos de guerreiros purificados para enfrentarem criaturas corrompidas. O jogo combina combate estratégico, exploração profunda e atmosfera melancólica. Ao longo da jornada, o jogador desbloqueia novas habilidades, recupera fragmentos da história e decide o destino final do reino.",
+        "trailer": "https://www.youtube.com/embed/KqHewI5_cjo"
+    }, 
+    {
+        "nome": "Hollow Knight",
+        "steam_link": "https://store.steampowered.com/app/367520/Hollow_Knight/",
+        "data": "24/02/2017",
+        "resumo": "Hollow Knight é um jogo de ação e aventura 2D no estilo metroidvania que se passa no reino fictício de Hallownest. [6] O jogador controla um cavaleiro silencioso, um receptáculo, enquanto explora um mundo subterrâneo. O cavaleiro usa uma arma em forma de prego, chamada ferrão, tanto para combate quanto para interagir com o ambiente. [6] Em sua jornada, ele desvenda os mistérios de um reino em ruínas habitado por insetos e heróis.",
+         "trailer":"https://www.youtube.com/embed/UAO2urG23S4"
+
+
+    },
+    {
+        "nome": "Blasphemous",
+        "steam_link": "https://store.steampowered.com/app/774361/Blasphemous/",
+        "data": "10/09/2019",
+        "resumo": "Em Blasphemous, você assume o papel do Penitente, o único sobrevivente de um massacre. [25] Preso em um ciclo de morte e renascimento, sua missão é libertar o mundo de uma terrível maldição conhecida como O Milagre e descobrir a origem de sua angústia. [29] Explore um mundo aterrorizante de religião distorcida, execute combos devastadores e derrote hordas de monstros grotescos e chefes titânicos. [29]",
+        "trailer":"https://www.youtube.com/embed/T3SxYMu5qGY"
+    },
+    {
+        "nome": "Castlevania: Symphony of the Night",
+        "steam_link": "https://store.steampowered.com/app/2053590/Castlevania_Advance_Collection/",
+        "data": "20/03/1997",
+        "resumo": "Sequência direta de Castlevania: Rondo of Blood, o jogo se passa quatro anos após os eventos do título anterior. [3] O protagonista é Alucard, o filho de Drácula, que desperta de seu sono para explorar o castelo de seu pai, que ressurgiu após o desaparecimento de Richter Belmont. [3] O objetivo é explorar o castelo para derrotar uma entidade que está controlando Richter. [7]",
+        "trailer":"https://www.youtube.com/embed/Rm2KKmud2MA"
+    },
+    {
+        "nome": "Hollow Knight: Silksong",
+        "steam_link": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
+        "data": "04/09/2025",
+        "resumo": "Sequência do aclamado Hollow Knight, Silksong coloca os jogadores no controle de Hornet, a princesa protetora de Hallownest. [1] Capturada e levada para o reino desconhecido de Pharloom, ela deve explorar essa nova terra, enfrentar mais de 165 novos inimigos e desvendar os mistérios por trás de sua captura enquanto sobe ao topo do reino. [1, 2] O jogo expande as mecânicas do original, com um combate mais ágil e acrobático. [23]",
+        "trailer":"https://www.youtube.com/embed/6XGeJwsUP9c"
+    },
+    {
+        "nome": "Ori and the Blind Forest",
+        "steam_link": "https://store.steampowered.com/app/387290/Ori_and_the_Blind_Forest_Definitive_Edition/",
+        "data": "11/03/2015",
+        "resumo": "O jogador controla Ori, um espírito guardião branco, e Sein, a luz e os olhos da Árvore Espiritual. [10] Após uma tempestade devastadora, Ori precisa encontrar coragem para confrontar um inimigo sombrio e salvar a floresta de Nibel. [16, 27] O jogo explora uma história emocional sobre amor, sacrifício e esperança. [16, 31]",
+        "trailer":"https://www.youtube.com/embed/cklw-Yu3moE"
+    },
+    {
+        "nome": "Dead Cells",
+        "steam_link": "https://store.steampowered.com/app/588650/Dead_Cells/",
+        "data": "07/08/2018",
+        "resumo": "Dead Cells é um jogo de plataforma de ação no estilo \"roguelite\" e metroidvania. [9, 22] O jogador assume o controle de um experimento alquímico fracassado e precisa descobrir o que está acontecendo em uma ilha amaldiçoada, extensa e em constante mutação. [9, 22] Sem checkpoints, o jogador deve matar, morrer, aprender e repetir para avançar. [9, 22]",
+        "trailer":"https://www.youtube.com/embed/RvGaSPTcTxc"
+    },
+    {
+        "nome": "Ender Magnolia: Bloom in the Mist",
+        "steam_link": "https://store.steampowered.com/app/2725260/Ender_Magnolia_Bloom_in_the_Mist/",
+        "data": "22/01/2025",
+        "resumo": "Décadas após os eventos de Ender Lilies, em uma terra devastada pela Chuva da Morte, o jogador assume o papel de Lilac, uma \"Sintonizadora\" com o poder de purificar Homúnculos enlouquecidos por vapores tóxicos. [12, 13, 25] Ao acordar em um laboratório subterrâneo, ela parte em uma jornada pelo País dos Vapores para recuperar suas memórias e salvar tanto humanos quanto Homúnculos, desvendando os mistérios por trás da nova calamidade. [13, 25]",
+        "trailer":"https://www.youtube.com/embed/Q9wD4brP7nA"
+    },
+    {
+        "nome": "Bloodstained: Ritual of the Night",
+        "steam_link": "https://store.steampowered.com/app/692850/Bloodstained_Ritual_of_the_Night/",
+        "data": "18/06/2019",
+        "resumo": "Um RPG de ação de rolagem lateral com terror gótico, ambientado na Inglaterra do século XIX. [15] Uma força paranormal invocou um castelo infestado de demônios, e o jogador assume o papel de Miriam, uma órfã marcada por uma maldição de alquimista que cristaliza seu corpo lentamente. [15] Para se salvar e salvar a humanidade, ela deve lutar pelo castelo e derrotar o invocador, Gebel. [15]",
+        "trailer":"https://www.youtube.com/embed/e25cswlZr10"
+    }
+]
