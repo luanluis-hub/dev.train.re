@@ -4,6 +4,8 @@ let botaoBusca = document.querySelector("#botao-busca"); // Re-adicionado
 // --- MUDANÇA ADICIONADA ---
 // Seleciona o botão "VOLTAR" do HTML para que possamos adicionar uma funcionalidade a ele.
 let botaoVoltar = document.querySelector("#botao-voltar");
+// --- MUDANÇA ADICIONADA ---
+let containerBalao = document.querySelector("#container-balao");
 
 // Array que irá armazenar os dados dos jogos carregados do data.json
 let dados = [];
@@ -36,6 +38,8 @@ function renderizarComFade(funcaoDeRenderizacao, dados) {
 // Função que renderiza os nomes e as capas dos jogos na lista inicial
 function renderizarApenasNomes(jogos) {
     container.innerHTML = "";
+    containerBalao.style.display = 'block'; // Garante que o balão esteja visível
+
     jogos.forEach(jogo => {
         const card = document.createElement('article');
         // Adicionamos uma classe nova 'card-lista' para poder estilizar
@@ -68,6 +72,8 @@ function renderizarApenasNomes(jogos) {
 // Função que renderiza os cards com DETALHES COMPLETOS
 function renderizarDetalhesCompletos(jogos) {
     container.innerHTML = "";
+    containerBalao.style.display = 'none'; // Esconde o balão
+
     if (jogos.length === 0) {
         container.innerHTML = "<p>Nenhum jogo encontrado com este nome.</p>";
         return;
@@ -75,6 +81,8 @@ function renderizarDetalhesCompletos(jogos) {
 
     jogos.forEach(jogo => {
         const card = document.createElement('article');
+        // Adiciona uma classe específica para o card de detalhes
+        card.className = 'card-detalhes';
 
         card.innerHTML = `
             <h2>${jogo.nome}</h2>

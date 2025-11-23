@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap'); /* Importa a fonte Quicksand do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap'); /* Fonte do título */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /* Fonte 2D para o balão */
 
 * {
     box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
@@ -135,78 +136,12 @@ main {
     padding-bottom: 2rem; /* Adiciona um espaçamento inferior para o conteúdo não ficar colado no rodapé */
 }
 
-article {
-    background: none; /* Sem cor de fundo */
-    border-radius: 0; /* Sem bordas arredondadas */
-    padding: 0; /* Remove o padding */
-    padding: 0 1rem; /* Espaçamento interno nos lados */
-    margin-bottom: 1.25rem; /* Margem inferior */
-    box-shadow: none; /* Sem sombra */
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease; /* Transição suave */
-    border-bottom: 1px solid var(--bg-color); /* Borda inferior */
-    padding-bottom: 1.5rem; /* Espaçamento interno inferior */
-}
-
-article:hover {
-    cursor: pointer; /* Muda o cursor para uma mão */
-}
-
-article h2 {
-    margin-top: 0; /* Remove a margem superior */
-    font-weight: 600; /* Peso da fonte */
-    font-size: 1.6rem; /* Tamanho da fonte */
-    border-bottom: none; /* Sem borda inferior */
-    padding-bottom: 0; /* Sem espaçamento interno inferior */
-    margin-bottom: 0.25rem; /* Margem inferior */
-    color: var(--primary-color); /* Cor do texto */
-    /* --- ESTILO ADICIONADO PARA ANIMAÇÃO DE CLIQUE --- */
-    position: relative; /* Garante que a transformação não afete o layout de outros elementos */
-    transition: transform 0.1s ease-out; /* Transição rápida para o efeito de clique */
-}
-/* --- ESTILO ADICIONADO PARA ANIMAÇÃO DE CLIQUE --- */
-/* Aplica um efeito de escala quando o título é clicado */
-article:active h2 {
-    transform: scale(0.98); /* Diminui o tamanho do h2 quando o ARTICLE é clicado */
-}
-/* --- ESTILO ADICIONADO PARA O ÍCONE DE ESPADA --- */
-/* Cria um pseudo-elemento antes do texto do h2 para abrigar o ícone */
-article h2::before {
-    /* Utiliza a fonte Font Awesome para renderizar o ícone */
-    font-family: "Font Awesome 6 Free"; 
-    font-weight: 900; /* Necessário para ícones sólidos */
-    content: "\f6e2"; /* Código Unicode para o ícone de duas espadas cruzadas */
-    margin-right: 0.75rem; /* Espaçamento entre o ícone e o texto */
-    opacity: 0; /* O ícone começa invisível */
-    transition: opacity 0.3s ease-in-out; /* Transição suave para o efeito de fade-in */
-}
-
-/* Quando o mouse passa sobre o h2, o ícone se torna visível */
-article:hover h2::before {
-    opacity: 1; /* Torna o ícone visível quando o mouse passa sobre o ARTICLE */
-}
-
-
-article p {
-    margin: 0.5rem 0; /* Margem superior e inferior */
-    line-height: 1.6; /* Altura da linha para melhor legibilidade */
-    font-size: 1rem; /* Tamanho da fonte */
-    margin-bottom: 0.5rem; /* Margem inferior */
-    color: var(--secondary-color); /* Cor do texto */
-}
-
-article p strong {
-    color: var(--tertiary-color); /* Cor do texto em negrito */
-    font-weight: 400; /* Peso da fonte */
-}
-
-article a {
-    color: var(--primary-color); /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado padrão */
-    font-weight: 200; /* Peso da fonte */
-}
-
-article a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+/* --- ESTILO ADICIONADO PARA LAYOUT LADO A LADO --- */
+.main-content-wrapper {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens */
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 2rem; /* Espaço entre a lista e o balão */
 }
 
 .footer {
@@ -310,8 +245,82 @@ article a:hover {
     }
 }
 
-/* --- ANIMAÇÃO DE FADE ADICIONADA --- */
-/* Adiciona uma transição suave à opacidade do container dos cards */
+/* --- ESTILOS DO CONTAINER DE CARDS (REGRAS UNIFICADAS) --- */
 .card-container {
-    transition: opacity 0.3s ease-in-out;
+    flex: 1; /* Faz a lista de jogos crescer e ocupar o espaço disponível */
+    transition: opacity 0.3s ease-in-out; /* Adiciona a animação de fade */
+}
+
+/* --- ESTILOS PARA A ÁREA DE DIÁLOGO (AVATAR + BALÃO) --- */
+#dialogue-area {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o avatar e o balão */
+    gap: 2.5rem; /* Aumenta o espaço para o rabicho do balão */
+    position: sticky; /* Mantém a área de diálogo fixa ao rolar */
+    top: 160px; /* Distância do topo */
+    /* Remove a largura máxima daqui para que o container se ajuste ao conteúdo */
+}
+
+#avatar-personagem {
+    width: 220px; /* Aumenta o tamanho do avatar para ficar proporcional ao balão */
+    height: auto;
+    /* Efeito de sombra 2D para combinar com o balão */
+    filter: drop-shadow(4px 4px 0px var(--tertiary-color));
+}
+
+/* --- ESTILOS PARA O BALÃO DE TEXTO --- */
+#container-balao {
+    position: relative; /* O posicionamento agora é relativo ao #dialogue-area */
+    width: 100%;
+    max-width: 360px;
+    display: block; /* Garante que ele seja visível por padrão */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    
+    /* --- ESTILOS 2D PARA O BALÃO --- */
+    background-color: var(--primary-color); /* Cor de fundo do balão (clara, do tema) */
+    border: 2px solid var(--tertiary-color); /* Borda sólida para o visual 2D */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    padding: 20px;
+    box-shadow: 4px 4px 0px var(--tertiary-color); /* Sombra 2D */
+}
+
+/* Cria a borda do "rabicho" do balão de diálogo (triângulo maior e escuro) */
+#container-balao::before {
+    content: '';
+    position: absolute;
+    top: 80px; /* Posiciona o rabicho mais para cima, na altura da boca */
+    left: -32px; /* Posiciona o rabicho à esquerda */
+    border-width: 17px;
+    border-style: solid;
+    border-color: transparent var(--tertiary-color) transparent transparent; /* Cor da borda */
+    z-index: -1; /* Garante que fique atrás do rabicho principal */
+}
+
+/* Cria o "rabicho" do balão de diálogo (triângulo principal) */
+#container-balao::after {
+    content: '';
+    position: absolute;
+    top: 80px; /* Posiciona o rabicho mais para cima, na altura da boca */
+    left: -28px; /* Posiciona o rabicho principal à esquerda */
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent var(--primary-color) transparent transparent; /* Cor do rabicho */
+}
+
+#texto-balao {
+    /* --- ESTILOS AJUSTADOS PARA O TEXTO --- */
+    position: relative; /* O texto agora segue o fluxo normal dentro do balão */
+    font-family: 'VT323', monospace; /* APLICA A NOVA FONTE 2D */
+    text-align: center;
+    font-size: 1.3rem; /* Aumentado em 20% para melhor legibilidade */
+    font-weight: 400; /* Peso padrão para a fonte */
+    color: var(--bg-color); /* Cor escura para contrastar com o balão claro */
+    line-height: 1.5; /* Ajusta o espaçamento entre linhas para a nova fonte */
+}
+
+/* --- NOVO ESTILO PARA A TELA DE DETALHES --- */
+/* Quando um card de detalhes está presente, ele ocupa toda a largura */
+.card-detalhes {
+    width: 100%;
+    padding: 0 1rem;
 }
